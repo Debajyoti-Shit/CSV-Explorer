@@ -1,0 +1,13 @@
+StudentId,Batch,Name,Email,Status,College,DSA,WEBD,REACT,CompanyName,InterviewDate,Result
+6424a34b4b6ced0348c9d532,1st Oct,Debajyoti,test@gmail.com,Placed,JGEC,85,90,95,Google,May 02 2023,PASS
+64251c28b9f7b958054e35cd,1st Oct,Student1,s1@gmail.com,Placed,acb1,75,85,75,Google,May 02 2023,PASS
+64251c28b9f7b958054e35cd,1st Oct,Student1,s1@gmail.com,Placed,acb1,75,85,75,Infosys,Apr 01 2023,FAIL
+64251c28b9f7b958054e35cd,1st Oct,Student1,s1@gmail.com,Placed,acb1,75,85,75,Microsoft,Apr 20 2023,Didnot Attemp
+64251c28b9f7b958054e35cd,1st Oct,Student1,s1@gmail.com,Placed,acb1,75,85,75,Apple,Apr 01 2023,PASS
+6425dd258a268e96fa5147d2,1st Oct,student 2,s2@gmail.com,Placed,JGEC,85,85,90,Microsoft,Apr 20 2023,PASS
+6425e17d21cbe99972e308e4,1st Oct,student 3,s3@gmail.com,Not_placed,kbc,75,70,75,TCS,Apr 29 2023,PASS
+6425e17d21cbe99972e308e4,1st Oct,student 3,s3@gmail.com,Not_placed,kbc,75,70,75,Amazon,Apr 01 2023,PASS
+6425ed3396ad47103d508a8c,1st Oct,Student 0,s0@gmail.com,Placed,IIT-KGP,85,85,95,Google,May 02 2023,PASS
+6425ed3396ad47103d508a8c,1st Oct,Student 0,s0@gmail.com,Placed,IIT-KGP,85,85,95,Amazon,Apr 01 2023,FAIL
+642675f627efed330c05fd91,1st Oct,Student 4,s4@gmail.com,Placed,JGEC,85,90,95,Google,May 02 2023,On Hold
+642675f627efed330c05fd91,1st Oct,Student 4,s4@gmail.com,Placed,JGEC,85,90,95,Microsoft,Apr 20 2023,PASS

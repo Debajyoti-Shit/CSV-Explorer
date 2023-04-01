@@ -1,32 +1,40 @@
-<link rel="stylesheet" href="/css/upload.css" type="text/css">
+<link rel="stylesheet" href="/css/upload.css" type="text/css" />
 
+<!-- Create a section for the upload page -->
 <section class="upload-section">
-    <div class="header">
-        📁 CSV-Explorer
+  <div class="header">📁 CSV-Explorer</div>
+
+  <!-- Create a container for the file upload form -->
+  <div class="upload-container">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="csv" class="drop-container">
+        <p><i class="fa fa-upload"></i> Upload Your CSV File</p>
+        <input type="file" name="file" id="csv" accept=".csv" required />
+      </label>
+      <button class="learn-more">
+        <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text"
+          ><i class="fa fa-upload"></i>&nbsp; upload</span
+        >
+      </button>
+    </form>
+  </div>
+
+  <!-- Create a container for displaying the list of uploaded CSV files -->
+
+  <div class="csv-fileList">
+    <% for(i of file){ %>
+    <div class="file">
+      <p class="fileName">📁 <%= i %></p>
+      <div class="foo">
+        <a href="/detail/<%= i %>" class="detail"><i class="fa fa-eye"></i></a>
+        <a href="/delete/<%= i %>" class="delete"
+          ><i class="fa fa-trash"></i
+        ></a>
+      </div>
     </div>
-    <div class="upload-container">
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <label for="csv" class="drop-container">
-                <p><i class="fa fa-upload"></i> Upload Your CSV File</p>
-                <input type="file" name="file" id="csv" accept=".csv" required/>
-            </label>
-            <button class="learn-more">
-                <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-                </span>
-                <span class="button-text"><i class="fa fa-upload"></i>&nbsp; upload</span>
-              </button>
-        </form>
-    </div>
-    <div class="csv-fileList">
-        <% for(i of file){ %>
-            <div class="file">
-                <p class="fileName">📁 <%= i %></p>
-                <div class="foo">
-                    <a href="/detail/<%= i %>" class="detail"><i class="fa fa-eye"></i></a>
-                    <a href="/delete/<%= i %>" class="delete"><i class="fa fa-trash"></i></a>
-                </div>
-            </div>
-        <% } %>
-    </div>
+    <% } %>
+  </div>
 </section>

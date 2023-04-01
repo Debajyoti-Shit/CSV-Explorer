@@ -1,46 +1,54 @@
 <link rel="stylesheet" href="/css/details.css" type="text/css" />
 
+<!-- This is a section element that contains the detail page. -->
 <section class="detail-container">
-    <a href="/upload"><i class="fa fa-arrow-left"></i> Back</a>
+  <a href="/upload"><i class="fa fa-arrow-left"></i> Back</a>
   <p>
     <img src="https://cdn-icons-png.flaticon.com/128/28/28842.png" alt="file" />
     <%= file %>
   </p>
+  <!-- to search for data in the table -->
   <form>
     <input type="text" id="searchInput" placeholder="Search data.." />
     <button>Search</button>
   </form>
+  <!-- to sort the data in the table. -->
   <form id="sortForm" action="/filter/<%= file %>" method="post">
     <span>Sort : </span>
-    <% if(sortOrder === 'sortAsc' ){ %>
-      <select id="sortOrder" name="filter">
-        <option value="sortAsc">Ascending</option>
-        <option value="sortDesc">Decending</option>
-      </select>
+    <% if(sortOrder==='sortAsc' ){ %>
+    <select id="sortOrder" name="filter">
+      <option value="sortAsc">Ascending</option>
+      <option value="sortDesc">Decending</option>
+    </select>
     <% } else { %>
-      <select id="sortOrder" name="filter">
-        <option value="sortDesc">Decending</option>
-        <option value="sortAsc">Ascending</option>
-      </select>
-      <% } %> 
+    <select id="sortOrder" name="filter">
+      <option value="sortDesc">Decending</option>
+      <option value="sortAsc">Ascending</option>
+    </select>
+    <% } %>
     <button type="submit"><i class="fa fa-filter"></i></button>
   </form>
+
+  <!-- This is a table element that displays the data from the CSV file. -->
   <table class="table">
     <tr class="table-row">
       <% for (let key in jsonData[0]) { %>
       <th class="table-head"><%= key %></th>
       <% } %>
     </tr>
-    <% for (var i = 0; i < jsonData.length; i++) { %>
+
+    <% for (var i=0; i < jsonData.length; i++) { %>
     <tr class="table-row">
       <% for (let key in jsonData[i]) { %>
       <td class="table-data"><%= jsonData[i][key] %></td>
       <% } %>
     </tr>
+
     <% } %>
   </table>
 </section>
 
+<!-- This is a script tag that adds an event listener to the searchInput element, and filters the table data based on user input. -->
 <script type="text/javascript">
   const searchInput = document.getElementById("searchInput");
   const table = document.querySelector("table");
@@ -68,5 +76,3 @@
     }
   });
 </script>
-
-
