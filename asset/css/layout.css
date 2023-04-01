@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #e2e2e2;
+  height: 100vh; 
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}

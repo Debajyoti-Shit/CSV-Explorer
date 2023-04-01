@@ -1,0 +1,23 @@
+{
+  "name": "csv-explorer",
+  "version": "1.0.0",
+  "description": "A simple project to convert a CSV file to JSON format and display it in a tabular form using EJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Debajyoti Shit",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "multer": "^1.4.5-lts.1",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

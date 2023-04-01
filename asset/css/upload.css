@@ -1,0 +1,192 @@
+
+.upload-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.upload-section .header {
+  font-size: 40px;
+  margin: 40px;
+  color: #008537;
+}
+
+.upload-section .upload-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-section .upload-container .drop-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  color: #444;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.upload-section .upload-container .drop-container p {
+  font-size: 20px;
+}
+
+.upload-section .upload-container .drop-container:hover {
+  background: white;
+  border-color: #575555;
+}
+
+.upload-section .upload-container input[type=file] {
+  width: 40vw;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+.upload-section .upload-container input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #01d359;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.upload-section .upload-container input[type=file]::file-selector-button:hover {
+  background: #008d36;
+}
+
+.upload-section .upload-container button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.upload-section .upload-container button.learn-more {
+  margin-top: 20px;
+  width: 12rem;
+  height: auto;
+}
+
+.upload-section .upload-container button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #00a035ae;
+  border-radius: 1.625rem;
+}
+
+.upload-section .upload-container button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.upload-section .upload-container button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.upload-section .upload-container button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.upload-section .upload-container button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.upload-section .upload-container button:hover .circle {
+  width: 100%;
+}
+
+.upload-section .upload-container button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.upload-section .upload-container button:hover .button-text {
+  color: #fff;
+}
+
+.upload-section .csv-fileList {
+  background-color: rgba(202, 211, 203, 0.847);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.upload-section .csv-fileList .file {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  align-items: center;
+  width: 60vw;
+  border-bottom: 2px solid white;
+}
+
+.upload-section .csv-fileList .file .fileName {
+  color: #1a058d;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.upload-section .csv-fileList .file .foo {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload-section .csv-fileList .file .foo .detail {
+  color: rgb(40, 108, 255);
+  font-size: 22px;
+}
+
+.upload-section .csv-fileList .file .foo .delete {
+  color: rgb(255, 59, 59);
+  font-size: 25px;
+}
